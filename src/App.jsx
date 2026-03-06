@@ -60,9 +60,9 @@ const App = () => {
         <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 relative z-10 md:flex md:items-center md:justify-between">
           <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
             <div className="shrink-0 relative">
-              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-xl ring-2 ring-slate-100 bg-slate-100">
+              <div className="w-20 h-20 rounded-full overflow-hidden border border-slate-300 shadow-sm bg-slate-100 flex items-center justify-center">
                 <img
-                  src="/profile.png"
+                  src="/profile.jpg"
                   alt="Howard Profile"
                   className="w-full h-full object-cover"
                   onError={(e) => {
