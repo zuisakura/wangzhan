@@ -58,28 +58,43 @@ const App = () => {
       <header className="relative bg-white border-b border-slate-200 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 pointer-events-none"></div>
         <div className="max-w-5xl mx-auto px-6 py-16 md:py-20 relative z-10 md:flex md:items-center md:justify-between">
-          <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold tracking-wide uppercase mb-4">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
-              </span>
-              Actively looking for opportunities
+          <div className="flex flex-col md:flex-row md:items-center gap-6 md:gap-8">
+            <div className="shrink-0 relative">
+              <div className="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white shadow-xl ring-2 ring-slate-100 bg-slate-100">
+                <img
+                  src="/profile.png"
+                  alt="Howard Profile"
+                  className="w-full h-full object-cover"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.src = "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%2394a3b8'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z'/%3E%3C/svg%3E";
+                  }}
+                />
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
-              黄通浩 <span className="text-slate-400 font-light text-3xl">Howard</span>
-            </h1>
-            <p className="mt-4 text-xl text-slate-600 font-medium">复合型创作者 | 视频剪辑 | 产品运营 | 金融学子</p>
-            <div className="mt-6 flex flex-wrap gap-5 text-sm text-slate-600">
-              <a href="mailto:zuisakura@foxmail.com" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
-                <Mail className="w-4 h-4" /> zuisakura@foxmail.com
-              </a>
-              <span className="flex items-center gap-2">
-                <Phone className="w-4 h-4" /> 17816837809
-              </span>
-              <span className="flex items-center gap-2">
-                <GraduationCap className="w-4 h-4" /> 三亚学院 · 本科
-              </span>
+            <div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 text-xs font-semibold tracking-wide uppercase mb-4">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+                </span>
+                Actively looking for opportunities
+              </div>
+              <h1 className="text-4xl md:text-5xl font-bold text-slate-900 tracking-tight">
+                黄通浩 <span className="text-slate-400 font-light text-3xl">Howard</span>
+              </h1>
+              <p className="mt-4 text-xl text-slate-600 font-medium">复合型创作者 | 视频剪辑 | 产品运营 | 金融学子</p>
+              <div className="mt-6 flex flex-wrap gap-5 text-sm text-slate-600">
+                <a href="mailto:zuisakura@foxmail.com" className="flex items-center gap-2 hover:text-blue-600 transition-colors">
+                  <Mail className="w-4 h-4" /> zuisakura@foxmail.com
+                </a>
+                <span className="flex items-center gap-2">
+                  <Phone className="w-4 h-4" /> 17816837809
+                </span>
+                <span className="flex items-center gap-2">
+                  <GraduationCap className="w-4 h-4" /> 三亚学院 · 本科
+                </span>
+              </div>
             </div>
           </div>
           <div className="mt-8 md:mt-0 flex flex-col sm:flex-row gap-4">
@@ -250,7 +265,7 @@ const App = () => {
           </div>
         </div>
       </footer>
-    </div>
+    </div >
   );
 };
 
